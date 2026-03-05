@@ -1,20 +1,22 @@
-public class UseCase1PalindromeCheckerApp {
+public class UseCase2PalindromeCheckerApp {
 
-    // Main method – entry point of the application
     public static void main(String[] args) {
 
-        // Display welcome message
-        System.out.println("===================================");
-        System.out.println(" Welcome to Palindrome Checker App ");
-        System.out.println("===================================");
+        // Hardcoded string
+        String word = "madam";
 
-        // Display application details
-        System.out.println("Application Name : Palindrome Checker App");
-        System.out.println("Version          : 1.0");
+        // Reverse the string
+        String reverse = "";
 
-        // Inform user about next step
-        System.out.println("-----------------------------------");
-        System.out.println("Application started successfully.");
-        System.out.println("Proceeding to palindrome processing...");
+        for(int i = word.length() - 1; i >= 0; i--) {
+            reverse = reverse + word.charAt(i);
+        }
+
+        // Check palindrome using if-else
+        if(word.equals(reverse)) {
+            System.out.println(word + " is a Palindrome");
+        } else {
+            System.out.println(word + " is not a Palindrome");
+        }
     }
 }
