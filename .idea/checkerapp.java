@@ -2,20 +2,19 @@ public class UseCase4PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        // Original string
-        String word = "madam";
+        // Input string
+        String str = "racecar";
 
         // Convert string to character array
-        char[] chars = word.toCharArray();
+        char[] arr = str.toCharArray();
 
-        // Two-pointer technique
+        // Two-pointer approach
         int start = 0;
-        int end = chars.length - 1;
-
+        int end = arr.length - 1;
         boolean isPalindrome = true;
 
         while (start < end) {
-            if (chars[start] != chars[end]) {
+            if (arr[start] != arr[end]) {
                 isPalindrome = false;
                 break;
             }
@@ -25,9 +24,9 @@ public class UseCase4PalindromeCheckerApp {
 
         // Display result
         if (isPalindrome) {
-            System.out.println(word + " is a Palindrome");
+            System.out.println(str + " is a Palindrome");
         } else {
-            System.out.println(word + " is not a Palindrome");
+            System.out.println(str + " is not a Palindrome");
         }
     }
 }
